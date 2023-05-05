@@ -1,9 +1,12 @@
 import "./stylesheets/app.css";
+import Navbar from "./Components/Navbar/Navbar";
+import Hero from "./Components/Hero/Hero";
 
 function App() {
   return (
-    <div className="App">
-      <h1>Hello from sellersuccess</h1>
+    <div className="sellersuccess__webapp">
+      <Navbar />
+      <Hero />
     </div>
   );
 }

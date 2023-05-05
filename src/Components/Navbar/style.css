@@ -1,0 +1,62 @@
+.app_navbar {
+  position: absolute;
+  z-index: 10000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  max-width: 1380px;
+  margin: auto;
+  padding: 26px 75px 14px 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.app_navbar .app_logo {
+  width: 100%;
+  height: auto;
+  max-width: 140px;
+}
+.app_navbar .navigation {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+.app_navbar .navigation ul {
+  display: flex;
+  align-items: center;
+}
+.app_navbar .navigation ul li {
+  display: inline-block;
+  cursor: pointer;
+  margin-left: 54px;
+  font-weight: 400;
+  color: black;
+  font-style: normal;
+  text-transform: capitalize;
+  font-size: clamp(14px, 4vw, 16px);
+  transition: all 120ms ease-in-out;
+}
+.app_navbar .navigation ul li:hover {
+  color: rgb(56, 56, 56);
+}
+.app_navbar .navigation ul li:active {
+  transform: scale(0.9);
+}
+.app_navbar .navigation .tools_page_redirect {
+  transition: all 120ms ease-in-out;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  display: flex;
+  font-size: clamp(14px, 4vw, 17px);
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 12px;
+  border: 1px solid black;
+  font-weight: 600;
+  color: black;
+  background-color: transparent;
+  text-transform: capitalize;
+}/*# sourceMappingURL=style.css.map */
