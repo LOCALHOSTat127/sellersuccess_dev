@@ -1,12 +1,12 @@
 import "./stylesheets/app.css";
 import Navbar from "./Components/Navbar/Navbar";
-import Hero from "./Components/Hero/Hero";
+import Home from "./Pages/Home/Home";
 
 function App() {
   return (
     <div className="sellersuccess__webapp">
       <Navbar />
-      <Hero />
+      <Home />
     </div>
   );
 }
