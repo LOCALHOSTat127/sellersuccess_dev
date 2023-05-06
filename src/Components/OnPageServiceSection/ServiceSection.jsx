@@ -6,12 +6,92 @@ import { ReactComponent as AccountingSvg } from "../../assets/svg/accounting_svg
 import { ReactComponent as CodeSvg } from "../../assets/svg/code_svg.svg";
 import { ReactComponent as CodeSideSvg } from "../../assets/svg/code_side_svg.svg";
 
-
 import { ReactComponent as MarketingSvg } from "../../assets/svg/marketing_svg.svg";
 import { ReactComponent as MarketingSideSvg } from "../../assets/svg/marketing_side_svg.svg";
 
-
 const ServiceSection = () => {
+  const [isActive, setActive] = useState(0);
+
+  const SERVICES_DATA = [
+    {
+      service_title: "Business Accounting & Tax auditing Service",
+      inside_package: [
+        "Daily book Keeping.",
+        "Weakly Reports",
+        "GST returns : 3B,2A,2B, 9A",
+        "Income Tax Report Filing.",
+        "& Other compliances.",
+        "Monthely Data Backup.",
+      ],
+
+      offer_title: "1 MONTH FREE",
+      offer_sub_title: "Tally Accounting for you",
+      offer_desc:
+        " Still couldn’t make your mind? Then this complete one month free \
+      business accounting might offer might change your mind",
+
+      sidebar_desc:
+        "It’s not a Easy road When it comes to Accounting & Tax Reports \
+      Filling. But, no worry we have got your back, Providing you the \
+      Complete Accounting & Auditing Service.",
+    },
+    {
+      service_title: "Website Development & Maintainence Service",
+      inside_package: [
+        "Mobile Responsive Design",
+        "SEO Ready Code.",
+        "6 Months Maintenance",
+        "Morden Custom Design.",
+        "& Other compliances.",
+        "Latest Tech used Reactjs,NextJs,Node, & more",
+      ],
+
+      offer_title: "FREE HOSTING",
+      offer_sub_title: "& Domain for one year",
+      offer_desc:
+        "Already have Domain & Hosting? Don’t worry we wont charge extra for that.",
+
+      sidebar_desc:
+        "if you are running a business in 2023 & still don’t have your own website. then your are missing out your potential customers. So make your Digital presence Today.",
+    },
+    {
+      service_title: "Digital Marketing & management",
+      inside_package: [
+        "Facebook Ad Campaign.",
+        "Instagram Advertisement.",
+        "Targeted Google Ads",
+        "attractive Ads Design.",
+        "Audience & Keywords Research.",
+      ],
+
+      offer_title: "15% OFF on",
+      offer_sub_title: "Social Media Marketing",
+      offer_desc:
+        "Let the Customers know, your exist by getting their attention on Social media Advertisement.",
+
+      sidebar_desc:
+        "Have a business? but not the customers well than your should consider our Complete Digital Marketing & Social Media Management package JUST BUILT FOR YOUR BUSINESS.",
+    },
+  ];
+
+  const switchService = (e) => {
+    if (e) {
+      let id = e.target.dataset.id;
+
+      let list =
+        document.getElementsByClassName("_controlls_panel")[0].childNodes;
+
+      for (let i = 0; i < 3; i++) {
+        if (list[i].childNodes[0].dataset.id == id) {
+          list[i].classList.add("active");
+          setActive(i);
+        } else {
+          list[i].classList.remove("active");
+        }
+      }
+    }
+  };
+
   return (
     <section className="serivces__on_page">
       <div className="section_title_outer">
@@ -21,21 +101,36 @@ const ServiceSection = () => {
 
       <div className="service_outer_div">
         <div className="_controlls_panel">
-          <div className="cntrl_wrapper ">
+          <div className="cntrl_wrapper active">
+            <div
+              onClick={switchService}
+              data-id="1"
+              className="overlay_click"
+            ></div>
             <div className="cntrl">
               <AccountingSvg className="cntrl_svg" />
             </div>
             <dv className="line_heilighter"></dv>
           </div>
 
-          <div className="cntrl_wrapper active">
+          <div className="cntrl_wrapper">
+            <div
+              onClick={switchService}
+              data-id="2"
+              className="overlay_click"
+            ></div>
             <div className="cntrl">
               <CodeSvg className="cntrl_svg" />
             </div>
             <dv className="line_heilighter"></dv>
           </div>
 
-          <div className="cntrl_wrapper ">
+          <div className="cntrl_wrapper">
+            <div
+              onClick={switchService}
+              data-id="3"
+              className="overlay_click"
+            ></div>
             <div className="cntrl">
               <MarketingSvg className="cntrl_svg" />
             </div>
@@ -43,63 +138,51 @@ const ServiceSection = () => {
         </div>
         <div className="service_display_outer">
           <div className="service_title_outer">
-            <h2>Business Accounting & Tax auditing Service</h2>
+            <h2>{SERVICES_DATA[isActive]?.service_title}</h2>
           </div>
           <div className="inside_package_outer">
             <p>INSIDE PACKAGE</p>
             <ul className="package_perks">
-              <li>
-                <div className="heilighter"></div>
-                Daily book Keeping.
-              </li>
-              <li>
-                <div className="heilighter"></div>
-                Weakly Reports
-              </li>
-              <li>
-                <div className="heilighter"></div>
-                GST returns : 3B,2A,2B, 9A
-              </li>
-              <li>
-                <div className="heilighter"></div>
-                Income Tax Report Filing.
-              </li>
-              <li>
-                <div className="heilighter"></div>
-                TDS, TCS, AIS, TIC Reports.
-              </li>
-              <li>
-                <div className="heilighter"></div>& Other compliances.
-              </li>
-              <li>
-                <div className="heilighter"></div>Monthely Data Backup.
-              </li>
+              {SERVICES_DATA[isActive]?.inside_package.map((perk) => {
+                return (
+                  <li>
+                    <div className="heilighter"></div>
+                    {perk}
+                  </li>
+                );
+              })}
             </ul>
           </div>
           <div className="offer_outer">
             <div className="offer_head">
-              <h3 className="offer_title">1 MONTH FREE</h3>
-              <h4 className="offer_sub_title">Tally Accounting for you</h4>
+              <h3 className="offer_title">
+                {SERVICES_DATA[isActive]?.offer_title}
+              </h3>
+              <h4 className="offer_sub_title">
+                {SERVICES_DATA[isActive]?.offer_sub_title}
+              </h4>
             </div>
-            <p className="offer_desc">
-              Still couldn’t make your mind? Then this complete one month free
-              business accounting might offer might change your mind.
-            </p>
+            <p className="offer_desc">{SERVICES_DATA[isActive]?.offer_desc}</p>
           </div>
           <div className="service_cta">
             <p>Want to try this Service?</p>
             <p className="sm">
-              Fill up the form out team member will contact you.
+              Fill up the form our team member will contact you.
             </p>
           </div>
           <div className="side_bar_outer">
             <div className="desc_outer">
               <p className="service_desctiption">
-                It’s not a Easy road When it comes to Accounting & Tax Reports
-                Filling. But, no worry we have got your back, Providing you the
-                Complete Accounting & Auditing Service.
+                {SERVICES_DATA[isActive]?.sidebar_desc}
               </p>
-              <AccountingSideSvg className="side_svg" />
+
+              {isActive === 0 ? (
+                <AccountingSideSvg className="side_svg" />
+              ) : isActive === 1 ? (
+                <CodeSideSvg className="side_svg" />
+              ) : (
+                <MarketingSideSvg className="side_svg" />
+              )}
             </div>
           </div>
         </div>
