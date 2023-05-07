@@ -78,12 +78,12 @@ const Footer = () => {
             <Link to="/contact">
               <li>Terms & conditions</li>
             </Link>
-            <Link to="/contact">
+            <Link to="/privacy-policy">
               <li>Privacy Policy</li>
             </Link>
-            <Link to="/contact">
+            <Link to="/cookie-policy">
               <li>Cookies Policy</li>
-            </Link>
+            </Link> 
           </ul>
 
           <p className="copyright">© all rights reserved 2020 - 2023</p>

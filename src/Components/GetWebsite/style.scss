@@ -1,0 +1,107 @@
+.inplace_Ad {
+  width: 100%;
+  height: 100%;
+
+  padding: 40px 80px;
+  .inner {
+    box-shadow: rgba(60, 64, 67, 0.3) 0px 1px 2px 0px,
+      rgba(60, 64, 67, 0.15) 0px 2px 6px 2px;
+    border-radius: 12px;
+    background: linear-gradient(to right, #122503, #037459);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    gap: 40px;
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    transition: all 100ms ease-in-out;
+
+    &:hover {
+      box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px,
+        rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
+    }
+
+    .inner_left {
+      padding: 60px 40px;
+      .ad_title {
+        margin-bottom: 20px;
+        width: 100%;
+        display: flex;
+        gap: 12px;
+        .heading_one {
+          font-weight: 600;
+          color: white;
+          font-style: normal;
+          text-transform: capitalize;
+          font-size: clamp(26px, 4vw, 28px);
+        }
+
+        .heading_two {
+          font-weight: 300;
+          color: white;
+          font-style: normal;
+          text-transform: none;
+          font-size: clamp(26px, 4vw, 28px);
+        }
+      }
+
+      .ad_desc {
+        color: white;
+        max-width: 450px;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+
+        .desc {
+          font-size: clamp(15px, 4vw, 17px);
+          font-weight: 300;
+          line-height: 28px;
+        }
+      }
+
+      .website_cta {
+        margin-top: 32px;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        border: none;
+        outline: none;
+        font-size: 16px;
+        background-color: white;
+        border-radius: 4px;
+        padding: 8px 12px;
+        font-weight: 600;
+        text-transform: uppercase;
+        cursor: pointer;
+        transition: all 120ms ease-in-out;
+
+        &:hover {
+          background-color: rgb(207, 252, 198);
+          .sm_svg {
+            transform: rotate(-90deg) translateY(8px);
+          }
+        }
+        &:active {
+            transform: scale(0.95);
+        }
+
+        .sm_svg {
+          transition: all 120ms ease-in-out;
+          transform: rotate(-90deg) translateY(0px);
+        }
+      }
+    }
+    .inner_right {
+      position: relative;
+      .bg_img {
+        position: absolute;
+        right: 10px;
+        bottom: -20px;
+        width: 100%;
+        height: 100%;
+        max-width: 500px;
+      }
+    }
+  }
+}
