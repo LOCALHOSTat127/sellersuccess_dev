@@ -10,8 +10,8 @@ const Home = () => {
     <div className="sellersuccess_home_page">
       <Hero />
       <ServiceSection />
-      <Getwebsite />
       <MarketingSection />
+      <Getwebsite />
       <FooterContact />
     </div>
   );

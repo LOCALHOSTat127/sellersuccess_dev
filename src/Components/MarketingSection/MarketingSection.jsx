@@ -38,12 +38,7 @@ const MarketingSection = () => {
             </li>
           </ul>
 
-          <a href="tel:+91 7852099185">
-            <button className="marketing_cta">
-              Contact Sales <hr /> +91 7852099185
-              <Arrow className="sm_svg" />
-            </button>
-          </a>
+         
         </div>
       </div>
     </section>

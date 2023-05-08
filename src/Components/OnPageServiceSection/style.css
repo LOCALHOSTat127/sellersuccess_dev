@@ -3,7 +3,7 @@
   flex-direction: column;
   gap: 40px;
   background-color: white;
-  padding: 80px 0px 20px 0px;
+  padding: 100px 0px 30px 0px;
 }
 .serivces__on_page .section_title_outer {
   display: flex;
@@ -13,7 +13,7 @@
 .serivces__on_page .section_title_outer .heilighter {
   width: 50px;
   height: 20px;
-  background-color: #00ff49;
+  background-color: #90ff7a;
 }
 .serivces__on_page .section_title_outer .section_title {
   font-weight: 600;
@@ -44,7 +44,7 @@
   width: -moz-fit-content;
   width: fit-content;
   padding: 14px;
-  border-radius: 4px;
+  border-radius: 11px;
   width: 70px;
   height: 70px;
   display: flex;
@@ -71,7 +71,7 @@
   background-color: #00ba35;
 }
 .serivces__on_page .service_outer_div ._controlls_panel .cntrl_wrapper.active {
-  background-color: #09ff4f;
+  background-color: #cffcc6;
 }
 .serivces__on_page .service_outer_div ._controlls_panel .cntrl_wrapper:active .cntrl {
   transform: scale(0.95);
@@ -89,7 +89,7 @@
   grid-template-rows: 0.2fr 0.5fr 0.3fr;
 }
 .serivces__on_page .service_outer_div .service_display_outer .service_title_outer {
-  border-radius: 4px;
+  border-radius: 11px;
   grid-column: 1/3;
   grid-row: 1/2;
   background-color: #e8ffd7;
@@ -107,7 +107,7 @@
   font-size: clamp(18px, 4vw, 20px);
 }
 .serivces__on_page .service_outer_div .service_display_outer .inside_package_outer {
-  border-radius: 4px;
+  border-radius: 11px;
   grid-column: 1/2;
   grid-row: 2/-1;
   background-color: #e8ffd7;
@@ -143,7 +143,7 @@
 }
 .serivces__on_page .service_outer_div .service_display_outer .offer_outer {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 4px;
+  border-radius: 11px;
   grid-column: 2/3;
   grid-row: 2/3;
   background-color: #b1ffb9;
@@ -183,7 +183,7 @@
   position: relative;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 4px;
+  border-radius: 11px;
   grid-column: 2/3;
   grid-row: 3/-1;
   background-color: #e8ffd7;
@@ -214,7 +214,7 @@
 }
 .serivces__on_page .service_outer_div .service_display_outer .side_bar_outer {
   box-shadow: rgba(0, 0, 0, 0.02) 0px 1px 3px 0px, rgba(27, 31, 35, 0.15) 0px 0px 0px 1px;
-  border-radius: 4px;
+  border-radius: 11px;
   grid-column: 3/-1;
   grid-row: 1/-1;
   background-color: #09ff4f;

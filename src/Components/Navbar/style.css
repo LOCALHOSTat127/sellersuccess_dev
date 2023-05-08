@@ -13,8 +13,11 @@
   transition: all 120ms ease-in-out;
 }
 .app_navbar.scrollOverlay {
-  background-color: #95ffc9;
+  background-color: #cffcc6;
   padding: 14px 68px 14px 68px;
+}
+.app_navbar.scrollOverlay .navigation .tools_page_redirect {
+  display: none;
 }
 .app_navbar .app_logo {
   cursor: pointer;
