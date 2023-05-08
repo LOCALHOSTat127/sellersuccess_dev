@@ -34,13 +34,21 @@ const Hero = () => {
             Let’s make a Perfect plat that your business really needs of.
           </p>
           <div className="cta_jacket">
+          <a style={{
+              textDecoration :"none"
+            }} href="#contact">
             <button className="contact_redirect cta_btn">
               Let's Grow
               <img src={GrowSmStatic} className="btn_svg" />
             </button>
-            <button className="scrool_services cta_btn">
-              Keep Exploring
-            </button>
+            </a>
+            <a style={{
+              textDecoration :"none"
+            }} href="#services">
+              <button className="scrool_services cta_btn">
+                Keep Exploring
+              </button>
+            </a>
           </div>
         </div>
       </div>

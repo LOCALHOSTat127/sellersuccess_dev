@@ -15,8 +15,6 @@ function App() {
           <Route path="/" element={<Layout />}>
             <Route index path="/" element={<Home />} />
             <Route path="/about" element={<h1>About us</h1>} />
-            <Route path="/services" element={<h1>Services</h1>} />
-            <Route path="/contact" element={<h1>Contact us</h1>} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/cookie-policy" element={<Cpolicy />} />
             <Route path="*" element={<PageNotFound />} />

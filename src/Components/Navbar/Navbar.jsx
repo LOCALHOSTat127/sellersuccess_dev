@@ -26,10 +26,9 @@ const Navbar = () => {
     window.addEventListener("scroll", watchScrool);
   }, []);
 
-
-  useEffect(() =>{
+  useEffect(() => {
     watchScrool();
-  },[]);
+  }, []);
 
   return (
     <header className={`app_navbar ${isScrooling && "scrollOverlay"}`}>
@@ -41,12 +40,18 @@ const Navbar = () => {
           <Link to="/about">
             <li>About us</li>
           </Link>
-          <Link to="/services">
+          <a style={{
+          textDecoration : "none"
+        }} href="#services">
             <li>Services</li>
-          </Link>
+          </a>
           <li>Documents</li>
         </ul>
-        <button className="tools_page_redirect">Try out tools</button>
+        <a style={{
+          textDecoration : "none"
+        }} href="#contact">
+          <button  className="tools_page_redirect">Contact Us</button>
+        </a>
       </nav>
     </header>
   );

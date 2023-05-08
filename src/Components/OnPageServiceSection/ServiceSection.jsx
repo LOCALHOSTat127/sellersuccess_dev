@@ -93,7 +93,7 @@ const ServiceSection = () => {
   };
 
   return (
-    <section className="serivces__on_page">
+    <section id="services" className="serivces__on_page">
       <div className="section_title_outer">
         <div className="heilighter"></div>
         <p className="section_title">Explore Our Services</p>
@@ -110,7 +110,7 @@ const ServiceSection = () => {
             <div className="cntrl">
               <AccountingSvg className="cntrl_svg" />
             </div>
-            <dv className="line_heilighter"></dv>
+            <div className="line_heilighter"></div>
           </div>
 
           <div className="cntrl_wrapper">
@@ -122,7 +122,7 @@ const ServiceSection = () => {
             <div className="cntrl">
               <CodeSvg className="cntrl_svg" />
             </div>
-            <dv className="line_heilighter"></dv>
+            <div className="line_heilighter"></div>
           </div>
 
           <div className="cntrl_wrapper">
@@ -143,9 +143,9 @@ const ServiceSection = () => {
           <div className="inside_package_outer">
             <p>INSIDE PACKAGE</p>
             <ul className="package_perks">
-              {SERVICES_DATA[isActive]?.inside_package.map((perk) => {
+              {SERVICES_DATA[isActive]?.inside_package.map((perk,index) => {
                 return (
-                  <li>
+                  <li key={index}>
                     <div className="heilighter"></div>
                     {perk}
                   </li>
