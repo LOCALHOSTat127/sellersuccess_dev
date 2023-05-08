@@ -75,7 +75,7 @@ const Footer = () => {
           <CaptchaSvg className="sm_svg" />
 
           <ul className="secondary_nav">
-            <Link to="/contact">
+            <Link to="/terms-conditions">
               <li>Terms & conditions</li>
             </Link>
             <Link to="/privacy-policy">

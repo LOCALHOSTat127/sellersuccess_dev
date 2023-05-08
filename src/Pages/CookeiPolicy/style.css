@@ -1,0 +1,40 @@
+.cookie_policy {
+  width: 100%;
+  height: 100%;
+  background-color: #e2ffee;
+}
+.cookie_policy .inner {
+  width: 80%;
+  margin: auto;
+  height: 100%;
+  padding: 150px 60px 40px 60px;
+}
+.cookie_policy .inner .page_title {
+  font-weight: 600;
+  color: black;
+  font-size: clamp(18px, 4vw, 22px);
+}
+.cookie_policy .inner h1,
+.cookie_policy .inner h2,
+.cookie_policy .inner h3,
+.cookie_policy .inner h4,
+.cookie_policy .inner h5,
+.cookie_policy .inner h6 {
+  margin-bottom: 20px;
+  font-weight: 600;
+  color: black;
+  font-size: clamp(16px, 4vw, 18px);
+}
+.cookie_policy .inner p {
+  margin-bottom: 14px;
+  line-height: 24px;
+}
+.cookie_policy .inner ul {
+  margin-bottom: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+.cookie_policy .inner ul li {
+  line-height: 24px;
+}/*# sourceMappingURL=style.css.map */
