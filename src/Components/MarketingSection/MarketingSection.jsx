@@ -7,9 +7,6 @@ const MarketingSection = () => {
   return (
     <section className="marketig_section">
       <div className="inner">
-        <div className="inner_left">
-          <MarketingBanner className="banner_svg" />
-        </div>
         <div className="inner_right">
           <h2 className="title">Social Media Marketing</h2>
 
@@ -39,6 +36,10 @@ const MarketingSection = () => {
           </ul>
 
          
+        </div>
+
+        <div className="inner_left">
+          <MarketingBanner className="banner_svg" />
         </div>
       </div>
     </section>

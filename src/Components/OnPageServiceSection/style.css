@@ -13,12 +13,13 @@
 .serivces__on_page .section_title_outer .heilighter {
   width: 50px;
   height: 20px;
-  background-color: #90ff7a;
+  border-radius: 0px 2px 2px 0px;
+  background-color: #cfffab;
 }
 .serivces__on_page .section_title_outer .section_title {
   font-weight: 600;
   color: black;
-  text-transform: uppercase;
+  text-transform: capitalize;
   font-style: normal;
   font-size: clamp(17px, 4vw, 20px);
 }

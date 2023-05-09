@@ -21,7 +21,8 @@
 .marketig_section .inner .inner_right {
   display: flex;
   flex-direction: column;
-  padding: 60px 80px 60px 10px;
+  justify-content: center;
+  padding: 40px 80px;
 }
 .marketig_section .inner .inner_right .title {
   text-transform: capitalize;
