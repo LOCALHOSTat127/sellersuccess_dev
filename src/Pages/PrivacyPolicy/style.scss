@@ -42,3 +42,21 @@
     }
   }
 }
+
+
+// media-query
+@media only screen and (max-width: 576px) {
+  .privacy_policy{
+    .inner{
+      width: 100%;
+      padding: 100px 25px 40px 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+}
+
+// tablate
+@media only screen and (min-width: 768px) and (max-width: 915px) {
+}

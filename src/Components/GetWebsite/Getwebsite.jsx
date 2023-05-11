@@ -14,7 +14,7 @@ const Getwebsite = () => {
           </div>
           <div className="ad_desc">
             <p className="desc_one desc">
-              Do have a business & want to make sale online? then what better
+              Do you have a business & want to make sale online? then what better
               way then doing that on your own website. and we get it you don't
               want to get into the trouble of developing a website on your own.
             </p>

@@ -104,4 +104,110 @@
 .marketig_section .inner .inner_right .marketing_cta .sm_svg {
   transition: all 120ms ease-in-out;
   transform: rotate(-90deg) translateY(0px);
+}
+
+@media only screen and (max-width: 576px) {
+  .marketig_section {
+    padding: 20px 0px;
+  }
+  .marketig_section .inner {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+  }
+  .marketig_section .inner .inner_left {
+    padding: 40px 20px;
+    padding: 40px;
+  }
+  .marketig_section .inner .inner_left .banner_svg {
+    width: 100%;
+    height: auto;
+    max-width: 380px;
+  }
+  .marketig_section .inner .inner_right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 25px;
+  }
+  .marketig_section .inner .inner_right .title {
+    text-transform: capitalize;
+    color: black;
+    font-weight: 600;
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+  .marketig_section .inner .inner_right .desc {
+    font-size: clamp(18px, 4vw, 19px);
+    max-width: 480px;
+    font-weight: 400px;
+    color: black;
+    line-height: 32px;
+  }
+  .marketig_section .inner .inner_right .list {
+    margin-top: 34px;
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    width: 100%;
+    -moz-column-gap: 8px;
+         column-gap: 8px;
+    row-gap: 18px;
+  }
+  .marketig_section .inner .inner_right .list li {
+    border-radius: 4px;
+    width: -moz-fit-content;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 18px;
+    background-color: #77ff9e;
+  }
+  .marketig_section .inner .inner_right .list li p {
+    font-size: 17px;
+    font-weight: 600;
+    color: black;
+    text-transform: capitalize;
+  }
+  .marketig_section .inner .inner_right .list li .dot {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: black;
+  }
+  .marketig_section .inner .inner_right a {
+    text-decoration: none;
+  }
+  .marketig_section .inner .inner_right .marketing_cta {
+    margin-top: 32px;
+    display: flex;
+    width: -moz-fit-content;
+    width: fit-content;
+    align-items: center;
+    color: black;
+    gap: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: rgba(16, 250, 35, 0.445);
+    border-radius: 4px;
+    padding: 10px 16px;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 120ms ease-in-out;
+  }
+  .marketig_section .inner .inner_right .marketing_cta:hover {
+    background-color: rgb(143, 243, 123);
+  }
+  .marketig_section .inner .inner_right .marketing_cta:hover .sm_svg {
+    transform: rotate(-90deg) translateY(8px);
+  }
+  .marketig_section .inner .inner_right .marketing_cta:active {
+    transform: scale(0.95);
+  }
+  .marketig_section .inner .inner_right .marketing_cta .sm_svg {
+    transition: all 120ms ease-in-out;
+    transform: rotate(-90deg) translateY(0px);
+  }
 }/*# sourceMappingURL=style.css.map */

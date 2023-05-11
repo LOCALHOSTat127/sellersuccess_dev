@@ -1,9 +1,12 @@
 import "./style.css";
-import Navbar from "../Navbar/Navbar";
+
 import { ReactComponent as ManThinkingSvg } from "../../assets/svg/man_thinkgin_illustration.svg";
 import { ReactComponent as LeftObjectSvg } from "../../assets/svg/left_object.svg";
 import { ReactComponent as RightObjectSvg } from "../../assets/svg/right_object.svg";
-import GrowGif from "../../assets/png/grow.gif";
+import { ReactComponent as MobileHeroImg } from "../../assets/svg/mobile_hero.svg";
+
+
+
 import GrowSmStatic from "../../assets/png/grow_sm.png";
 
 const Hero = () => {
@@ -31,7 +34,8 @@ const Hero = () => {
         {/* CTA_buttons */}
         <div className="secondary_content">
           <p className="hero_desc">
-            Let’s make a Perfect plat that your business really needs of.
+
+            Let’s make a perfect growth plan that your business really needs of.
           </p>
           <div className="cta_jacket">
           <a style={{
@@ -54,6 +58,7 @@ const Hero = () => {
       </div>
 
       <ManThinkingSvg className="hero__image" />
+      <MobileHeroImg className="mobile_img" />
       <LeftObjectSvg className="left_obj" />
       <RightObjectSvg className="right_obj" />
     </section>

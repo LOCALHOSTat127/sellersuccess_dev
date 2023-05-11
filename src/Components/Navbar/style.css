@@ -1,40 +1,50 @@
-.app_navbar {
-  position: fixed;
-  z-index: 10000;
+.navbar {
   top: 0;
-  left: 0;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100%;
   max-width: 1380px;
-  margin: auto;
-  padding: 26px 75px 14px 80px;
+  z-index: 50000;
+  position: fixed;
+  transition: all 350ms ease-in-out;
+}
+.navbar .app_bar {
+  position: relative;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 26px 75px 14px 80px;
   transition: all 120ms ease-in-out;
 }
-.app_navbar.scrollOverlay {
+.navbar .app_bar.scrollOverlay {
   background-color: #cffcc6;
   padding: 14px 68px 14px 68px;
 }
-.app_navbar.scrollOverlay .navigation .tools_page_redirect {
+.navbar .app_bar.scrollOverlay .navigation .tools_page_redirect {
   display: none;
 }
-.app_navbar .app_logo {
+.navbar .app_bar .app_logo {
   cursor: pointer;
   width: 100%;
   height: auto;
   max-width: 140px;
 }
-.app_navbar .navigation {
+.navbar .app_bar .navigation {
   display: flex;
   align-items: center;
   gap: 40px;
+  position: relative;
 }
-.app_navbar .navigation ul {
+.navbar .app_bar .navigation .open_menu_svg {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+.navbar .app_bar .navigation ul {
   display: flex;
   align-items: center;
 }
-.app_navbar .navigation ul li {
+.navbar .app_bar .navigation ul li {
   display: inline-block;
   cursor: pointer;
   margin-left: 54px;
@@ -45,13 +55,13 @@
   font-size: clamp(14px, 4vw, 16px);
   transition: all 120ms ease-in-out;
 }
-.app_navbar .navigation ul li:hover {
+.navbar .app_bar .navigation ul li:hover {
   color: rgb(56, 56, 56);
 }
-.app_navbar .navigation ul li:active {
+.navbar .app_bar .navigation ul li:active {
   transform: scale(0.9);
 }
-.app_navbar .navigation .tools_page_redirect {
+.navbar .app_bar .navigation .tools_page_redirect {
   transition: all 120ms ease-in-out;
   cursor: pointer;
   border: none;
@@ -68,4 +78,75 @@
   color: black;
   background-color: transparent;
   text-transform: capitalize;
+}
+.navbar .app_bar .mobile_menu {
+  position: absolute;
+  right: -500px;
+  top: 0;
+  width: 100%;
+  max-width: 250px;
+  height: 100vh;
+  background-color: red;
+  transition: all 120ms ease-in-out;
+}
+.navbar .app_bar .mobile_menu.menu_open {
+  right: 0;
+}
+
+@media only screen and (max-width: 576px) {
+  .navbar .app_bar {
+    padding: 26px 25px 14px 25px;
+  }
+  .navbar .app_bar.scrollOverlay {
+    background-color: #cffcc6;
+    padding: 20px 20px 20px 20px;
+  }
+  .navbar .app_bar.scrollOverlay .navigation .tools_page_redirect {
+    display: none;
+  }
+  .navbar .app_bar .app_logo {
+    max-width: 120px;
+  }
+  .navbar .app_bar .navigation ul {
+    display: none;
+  }
+  .navbar .app_bar .navigation .open_menu_svg {
+    display: flex;
+    width: 22px;
+    height: 22px;
+  }
+  .navbar .app_bar .navigation .tools_page_redirect {
+    display: none;
+  }
+}
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+  .navbar .app_bar {
+    padding: 26px 25px 14px 25px;
+  }
+  .navbar .app_bar.scrollOverlay {
+    background-color: #cffcc6;
+    padding: 14px 20px 14px 20px;
+  }
+  .navbar .app_bar.scrollOverlay .navigation .tools_page_redirect {
+    display: none;
+  }
+  .navbar .app_bar .app_logo {
+    max-width: 120px;
+  }
+  .navbar .app_bar .navigation ul {
+    display: none;
+  }
+  .navbar .app_bar .navigation .open_menu_svg {
+    display: flex;
+    width: 20px;
+    height: 20px;
+  }
+  .navbar .app_bar .navigation .tools_page_redirect {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 915px) {
+  .navbar .app_bar .navigation .nav_contact_btn {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */

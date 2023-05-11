@@ -70,15 +70,13 @@
         text-transform: capitalize;
         cursor: pointer;
         transition: all 120ms ease-in-out;
-          background-color: #77ff9e;
+        background-color: #77ff9e;
 
         &:hover {
-        
           .sm_svg {
             transform: rotate(-90deg) translateY(8px);
           }
         }
-    
 
         .sm_svg {
           transition: all 120ms ease-in-out;
@@ -87,4 +85,102 @@
       }
     }
   }
+}
+
+// media-query
+@media only screen and (max-width: 576px) {
+  .footer_contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+
+    .inner_left {
+      padding: 40px 20px 0px 20px;
+      position: relative;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      .sm_svg {
+        width: 100%;
+        height: auto;
+        max-width: 350px;
+        object-fit: contain;
+      }
+    }
+
+    .inner_right {
+      padding: 20px 10px;
+      .headone {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        h4 {
+          color: black;
+          font-weight: 600;
+          text-transform: capitalize;
+          font-size: 24px;
+          line-height: 30px;
+        }
+        p {
+          color: rgb(34, 34, 34);
+          font-weight: 300;
+          text-transform: lowercase;
+          font-size: 17px;
+        }
+      }
+
+      .contact_controlls {
+        margin-top: 40px;
+        display: flex;
+        flex-direction: column;
+        gap: 34px;
+        .upper_input {
+          display: flex;
+          gap: 14px;
+        }
+        .lower_input {
+          display: flex;
+          flex-direction: column;
+          gap: 24px;
+        }
+
+        .sendmail {
+          margin-top: 10px;
+          display: flex;
+          align-items: center;
+          color: black;
+          gap: 8px;
+          border: none;
+          outline: none;
+          font-size: 16px;
+          background-color: white;
+          border-radius: 4px;
+          padding: 12px 12px;
+          width: fit-content;
+          font-weight: 600;
+          text-transform: capitalize;
+          cursor: pointer;
+          transition: all 120ms ease-in-out;
+          background-color: #77ff9e;
+
+          &:hover {
+            .sm_svg {
+              transform: rotate(-90deg) translateY(8px);
+            }
+          }
+
+          .sm_svg {
+            transition: all 120ms ease-in-out;
+            transform: rotate(-90deg) translateY(0px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+}
+
+// tablate
+@media only screen and (min-width: 768px) and (max-width: 915px) {
 }

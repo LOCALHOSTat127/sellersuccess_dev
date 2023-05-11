@@ -10,8 +10,8 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 function App() {
   return (
-    <div className="sellersuccess__webapp">
-      <BrowserRouter>
+    <BrowserRouter>
+      <div className="sellersuccess__webapp">
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index path="/" element={<Home />} />
@@ -21,8 +21,8 @@ function App() {
             <Route path="*" element={<PageNotFound />} />
           </Route>
         </Routes>
-      </BrowserRouter>
-    </div>
+      </div>
+    </BrowserRouter>
   );
 }
 

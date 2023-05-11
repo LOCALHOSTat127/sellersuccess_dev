@@ -3,7 +3,7 @@
   width: 100%;
   min-height: 100vh;
   max-height: 100%;
-  background-color: #E7FFE9;
+  background-color: #e7ffe9;
   position: relative;
   overflow: hidden;
   .hero__image {
@@ -13,7 +13,13 @@
     width: 100%;
     height: auto;
     max-width: 665px;
-   filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+  }
+
+  .mobile_img {
+    display: none;
+    filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+    
   }
 
   .left_obj {
@@ -166,9 +172,8 @@
           }
 
           &:hover {
-           
-            .btn_svg{
-                content: url("../../assets/png/grow.gif");
+            .btn_svg {
+              content: url("../../assets/png/grow.gif");
             }
           }
         }
@@ -182,11 +187,138 @@
 
           &:hover {
             background-color: #8df96a;
-
-            
           }
         }
       }
     }
   }
 }
+
+@media only screen and (max-width: 576px) {
+  .hero_section_sellersuccess {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    .hero__image {
+      display: none;
+    }
+    .mobile_img {
+      justify-self: center;
+      align-self: center;
+      display: flex;
+      width: 100%;
+      height: auto;
+      max-width: 350px;
+      filter: none;
+    }
+
+    .left_obj {
+      max-width: 12px;
+    }
+    .right_obj {
+      max-width: 55px;
+    }
+
+    .hero_content_pitch {
+      padding: 100px 25px 20px 25px;
+
+      .text_content {
+        margin-bottom: 28px;
+
+        .txt_one {
+          font-size: clamp(54px, 6vw, 79px);
+        }
+        .secondary__txt {
+          font-size: clamp(52px, 6vw, 72px);
+        }
+      }
+
+      // CTA_buttons
+      .secondary_content {
+        display: flex;
+        flex-direction: column;
+        gap: 24px;
+        align-items: flex-start;
+        .hero_desc {
+          font-weight: 500;
+          font-size: clamp(18px, 4vw, 20px);
+          text-transform: none;
+          font-style: normal;
+          max-width: 350px;
+          line-height: 30px;
+        }
+
+        .cta_jacket {
+          display: flex;
+          align-items: center;
+          gap: 16px;
+          .cta_btn {
+            transition: all 120ms ease-in-out;
+            cursor: pointer;
+
+            border: none;
+            outline: none;
+            border-radius: 4px;
+            display: flex;
+            font-size: clamp(14px, 4vw, 17px);
+            align-items: center;
+            justify-content: center;
+            gap: 8px;
+            padding: 12px 16px;
+
+            &:active {
+              transform: scale(0.9);
+            }
+          }
+
+          .contact_redirect {
+            border: 1px solid black;
+            font-weight: 600;
+            color: white;
+            background-color: black;
+
+            .btn_svg {
+              width: 100%;
+              height: auto;
+              max-width: 24px;
+            }
+
+            &:hover {
+              .btn_svg {
+                content: url("../../assets/png/grow.gif");
+              }
+            }
+          }
+
+          .scrool_services {
+            padding: 15px 16px;
+            border: 1px solid black;
+            font-weight: 600;
+            color: black;
+            background-color: transparent;
+
+            &:hover {
+              background-color: #8df96a;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+}
+
+// // tablate
+// @media only screen and (min-width: 768px) and (max-width: 915px) {
+//   .navbar {
+//     .app_bar {
+//       .navigation {
+//         .nav_contact_btn {
+//           display: none;
+//         }
+//       }
+//     }
+//   }
+// }

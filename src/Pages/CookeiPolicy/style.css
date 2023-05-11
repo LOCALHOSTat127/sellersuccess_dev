@@ -12,6 +12,7 @@
 .cookie_policy .inner .page_title {
   font-weight: 600;
   color: black;
+  line-height: 24px;
   font-size: clamp(18px, 4vw, 22px);
 }
 .cookie_policy .inner h1,
@@ -37,4 +38,11 @@
 }
 .cookie_policy .inner ul li {
   line-height: 24px;
+}
+
+@media only screen and (max-width: 576px) {
+  .cookie_policy .inner {
+    width: 100%;
+    padding: 100px 25px 40px 25px;
+  }
 }/*# sourceMappingURL=style.css.map */

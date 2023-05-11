@@ -11,6 +11,7 @@
     .page_title {
       font-weight: 600;
       color: black;
+      line-height: 24px;
       font-size: clamp(18px, 4vw, 22px);
     }
 
@@ -41,4 +42,22 @@
       }
     }
   }
+}
+
+
+// media-query
+@media only screen and (max-width: 576px) {
+  .cookie_policy{
+    .inner{
+      width: 100%;
+      padding: 100px 25px 40px 25px;
+    }
+  }
+}
+
+@media only screen and (min-width: 577px) and (max-width: 767px) {
+}
+
+// tablate
+@media only screen and (min-width: 768px) and (max-width: 915px) {
 }

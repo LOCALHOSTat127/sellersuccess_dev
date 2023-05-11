@@ -14,7 +14,7 @@ const ServiceSection = () => {
 
   const SERVICES_DATA = [
     {
-      service_title: "Business Accounting & Tax auditing Service",
+      service_title: "Business Accounting & auditing ",
       inside_package: [
         "Daily book Keeping.",
         "Weakly Reports",
@@ -36,7 +36,7 @@ const ServiceSection = () => {
       Complete Accounting & Auditing Service.",
     },
     {
-      service_title: "Website Development & Maintainence Service",
+      service_title: "Website Development",
       inside_package: [
         "Mobile Responsive Design",
         "SEO Ready Code.",
@@ -55,7 +55,7 @@ const ServiceSection = () => {
         "if you are running a business in 2023 & still don’t have your own website. then your are missing out your potential customers. So make your Digital presence Today.",
     },
     {
-      service_title: "Digital Marketing & management",
+      service_title: "Social Media Marketing",
       inside_package: [
         "Facebook Ad Campaign.",
         "Instagram Advertisement.",
@@ -177,7 +177,9 @@ const ServiceSection = () => {
               </p>
 
               {isActive === 0 ? (
-                <AccountingSideSvg className="side_svg" />
+                <AccountingSideSvg  style={{
+                  transform : "rotate(357deg)"
+                }} className="side_svg" />
               ) : isActive === 1 ? (
                 <CodeSideSvg className="side_svg" />
               ) : (

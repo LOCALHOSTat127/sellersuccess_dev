@@ -80,4 +80,88 @@
 .footer_contact .inner_right .contact_controlls .sendmail .sm_svg {
   transition: all 120ms ease-in-out;
   transform: rotate(-90deg) translateY(0px);
+}
+
+@media only screen and (max-width: 576px) {
+  .footer_contact {
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+  }
+  .footer_contact .inner_left {
+    padding: 40px 20px 0px 20px;
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+  }
+  .footer_contact .inner_left .sm_svg {
+    width: 100%;
+    height: auto;
+    max-width: 350px;
+    -o-object-fit: contain;
+       object-fit: contain;
+  }
+  .footer_contact .inner_right {
+    padding: 20px 10px;
+  }
+  .footer_contact .inner_right .headone {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  .footer_contact .inner_right .headone h4 {
+    color: black;
+    font-weight: 600;
+    text-transform: capitalize;
+    font-size: 24px;
+    line-height: 30px;
+  }
+  .footer_contact .inner_right .headone p {
+    color: rgb(34, 34, 34);
+    font-weight: 300;
+    text-transform: lowercase;
+    font-size: 17px;
+  }
+  .footer_contact .inner_right .contact_controlls {
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    gap: 34px;
+  }
+  .footer_contact .inner_right .contact_controlls .upper_input {
+    display: flex;
+    gap: 14px;
+  }
+  .footer_contact .inner_right .contact_controlls .lower_input {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+  }
+  .footer_contact .inner_right .contact_controlls .sendmail {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    color: black;
+    gap: 8px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+    background-color: white;
+    border-radius: 4px;
+    padding: 12px 12px;
+    width: -moz-fit-content;
+    width: fit-content;
+    font-weight: 600;
+    text-transform: capitalize;
+    cursor: pointer;
+    transition: all 120ms ease-in-out;
+    background-color: #77ff9e;
+  }
+  .footer_contact .inner_right .contact_controlls .sendmail:hover .sm_svg {
+    transform: rotate(-90deg) translateY(8px);
+  }
+  .footer_contact .inner_right .contact_controlls .sendmail .sm_svg {
+    transition: all 120ms ease-in-out;
+    transform: rotate(-90deg) translateY(0px);
+  }
 }/*# sourceMappingURL=style.css.map */
