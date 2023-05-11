@@ -93,7 +93,6 @@
     }
 
     .mobile_menu {
-
       display: flex;
       flex-direction: column;
       align-items: stretch;
@@ -114,7 +113,7 @@
         height: 24px;
         transition: all 120ms ease;
 
-        &:hover{
+        &:hover {
           background-color: #c9fccd;
         }
 
@@ -138,7 +137,7 @@
         justify-content: center;
         gap: 38px;
 
-        a{
+        a {
           width: 100%;
           text-decoration: none;
           color: black;
@@ -155,11 +154,10 @@
             width: 25px;
             height: 25px;
           }
-          
+
           transition: all 120ms ease-in-out;
           &:hover {
             background-color: #8aff94;
-            
           }
 
           &:active {
@@ -174,33 +172,42 @@
         height: 30%;
       }
 
-      .call {
-        justify-self: end;
+      .wa_btn {
+        text-decoration: none;
         color: black;
-        cursor: pointer;
-        border-radius: 6px;
-        font-size: 18px;
-        border: none;
-        outline: none;
+        position: relative;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        background-color: #8aff94;
-        gap: 15px;
-        font-weight: 600;
 
-        padding: 12px 0px;
-
-        transition: all 120ms ease-in-out;
-        &:hover {
+        .call {
+          width: 100%;
+          padding: 12px 0px;
+          justify-self: end;
+          color: black;
+          cursor: pointer;
+          border-radius: 6px;
+          font-size: 18px;
+          border: none;
+          outline: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
           background-color: #8aff94;
-          padding: 12px 8px;
-        }
+          gap: 15px;
+          font-weight: 600;
 
-        &:active {
-          background-color: #8aff94;
 
-          transform: scale(0.95);
+
+          transition: all 120ms ease-in-out;
+          &:hover {
+            background-color: #8aff94;
+            padding: 12px 8px;
+          }
+
+          &:active {
+            background-color: #8aff94;
+
+            transform: scale(0.95);
+          }
         }
       }
 

@@ -1,7 +1,7 @@
 import React from "react";
 import "./style.css";
 
-import { Link } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 import { ReactComponent as Logo } from "../../assets/svg/logo.svg";
 import { ReactComponent as CallSvg } from "../../assets/svg/call_svg.svg";
@@ -15,6 +15,14 @@ import { ReactComponent as TwitterSvg } from "../../assets/svg/twitter_svg.svg";
 import { ReactComponent as CaptchaSvg } from "../../assets/svg/captcha_svg.svg";
 
 const Footer = () => {
+  const NAVIGATE = useNavigate();
+  const relocate = (e) => {
+    NAVIGATE(e.target.dataset.url, {
+      replace: true,
+    });
+    window.scroll(0, 0);
+  };
+
   return (
     <footer className="app_footer">
       <div className="footer_inside">
@@ -75,15 +83,15 @@ const Footer = () => {
           <CaptchaSvg className="sm_svg" />
 
           <ul className="secondary_nav">
-            <Link to="/terms-conditions">
-              <li>Terms & conditions</li>
-            </Link>
-            <Link to="/privacy-policy">
-              <li>Privacy Policy</li>
-            </Link>
-            <Link to="/cookie-policy">
-              <li>Cookies Policy</li>
-            </Link> 
+            <li onClick={relocate} data-url="/terms-conditions">
+              Terms & conditions
+            </li>
+            <li onClick={relocate} data-url="/privacy-policy">
+              Privacy Policy
+            </li>
+            <li onClick={relocate} data-url="/cookie-policy">
+              Cookies Policy
+            </li>
           </ul>
 
           <p className="copyright">© all rights reserved 2020 - 2023</p>

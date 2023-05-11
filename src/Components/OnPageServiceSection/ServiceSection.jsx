@@ -143,7 +143,7 @@ const ServiceSection = () => {
           <div className="inside_package_outer">
             <p>INSIDE PACKAGE</p>
             <ul className="package_perks">
-              {SERVICES_DATA[isActive]?.inside_package.map((perk,index) => {
+              {SERVICES_DATA[isActive]?.inside_package.map((perk, index) => {
                 return (
                   <li key={index}>
                     <div className="heilighter"></div>
@@ -164,12 +164,27 @@ const ServiceSection = () => {
             </div>
             <p className="offer_desc">{SERVICES_DATA[isActive]?.offer_desc}</p>
           </div>
-          <div className="service_cta">
-            <p>Want to try this Service?</p>
-            <p className="sm">
-              Fill up the form our team member will contact you.
-            </p>
-          </div>
+          <a
+          style={{
+            textDecoration : "none"
+          }}
+            className="wa_btn"
+            href={isActive === 0 ? 
+            "https://api.whatsapp.com/send?phone=7852099185&text=I%20Need%20Accounting%20And%20Auditing%20Services" 
+              : isActive === 2 ? 
+              "https://api.whatsapp.com/send?phone=7852099185&text=I%20Need%20to%20Advertise%20My%20Business%20on%20Social%20Media" :
+               "https://api.whatsapp.com/send?phone=7852099185&text=I%20Want%20A%20Website%20For%20My%20Business"
+          }
+            target="_blank"
+            rel="noreferrer"
+          >
+            <div className="service_cta">
+              <p>Want to try this Service?</p>
+              <p className="sm">
+                Fill up the form our team member will contact you.
+              </p>
+            </div>
+          </a>
           <div className="side_bar_outer">
             <div className="desc_outer">
               <p className="service_desctiption">
@@ -177,9 +192,12 @@ const ServiceSection = () => {
               </p>
 
               {isActive === 0 ? (
-                <AccountingSideSvg  style={{
-                  transform : "rotate(357deg)"
-                }} className="side_svg" />
+                <AccountingSideSvg
+                  style={{
+                    transform: "rotate(357deg)",
+                  }}
+                  className="side_svg"
+                />
               ) : isActive === 1 ? (
                 <CodeSideSvg className="side_svg" />
               ) : (
