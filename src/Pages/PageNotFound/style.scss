@@ -6,12 +6,41 @@
   .inner {
     padding: 20px;
     display: flex;
+
     align-items: center;
     justify-content: center;
     .page_svg{
         width: 100%;
         height: auto;
         max-width: 850px;
+    }
+
+    .page_svg_mobile{
+      display: none;
+    }
+  }
+}
+
+
+// media-query
+@media only screen and (max-width: 576px) {
+  .page_not_found{
+    padding: 70px 20px 40px 20px;
+    .inner{
+     .page_svg{
+      display: none;
+     }
+     .page_svg_mobile{
+      display: flex;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+
+     }
+    }
+
+    p{
+      margin-top: 20px;
     }
   }
 }

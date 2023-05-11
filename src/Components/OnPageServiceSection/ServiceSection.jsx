@@ -10,7 +10,7 @@ import { ReactComponent as MarketingSvg } from "../../assets/svg/marketing_svg.s
 import { ReactComponent as MarketingSideSvg } from "../../assets/svg/marketing_side_svg.svg";
 
 const ServiceSection = () => {
-  const [isActive, setActive] = useState(0);
+  const [isActive, setActive] = useState(1);
 
   const SERVICES_DATA = [
     {
@@ -101,7 +101,7 @@ const ServiceSection = () => {
 
       <div className="service_outer_div">
         <div className="_controlls_panel">
-          <div className="cntrl_wrapper active">
+          <div className="cntrl_wrapper ">
             <div
               onClick={switchService}
               data-id="1"
@@ -113,7 +113,7 @@ const ServiceSection = () => {
             <div className="line_heilighter"></div>
           </div>
 
-          <div className="cntrl_wrapper">
+          <div className="cntrl_wrapper active">
             <div
               onClick={switchService}
               data-id="2"

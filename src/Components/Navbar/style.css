@@ -39,6 +39,7 @@
   width: 24px;
   height: 24px;
   display: none;
+  cursor: pointer;
 }
 .navbar .app_bar .navigation ul {
   display: flex;
@@ -80,17 +81,119 @@
   text-transform: capitalize;
 }
 .navbar .app_bar .mobile_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
   position: absolute;
   right: -500px;
   top: 0;
   width: 100%;
+  z-index: 500;
   max-width: 250px;
   height: 100vh;
-  background-color: red;
+  background-color: #e7ffe9;
   transition: all 120ms ease-in-out;
+  padding: 30px 20px;
+}
+.navbar .app_bar .mobile_menu .close_menu_svg {
+  width: 24px;
+  cursor: pointer;
+  align-self: flex-end;
+  height: 24px;
+  transition: all 120ms ease;
+  background-color: #8aff94;
+  padding: 5px;
+  border-radius: 6px;
+}
+.navbar .app_bar .mobile_menu .close_menu_svg:hover {
+  background-color: #c9fccd;
+}
+.navbar .app_bar .mobile_menu .close_menu_svg:active {
+  transform: scale(0.95);
+}
+.navbar .app_bar .mobile_menu .close_menu_svg path {
+  fill: black;
+}
+.navbar .app_bar .mobile_menu ul {
+  padding: 40px 10px 20px 10px;
+  min-height: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 38px;
+}
+.navbar .app_bar .mobile_menu ul a {
+  width: 100%;
+  text-decoration: none;
+  color: black;
+}
+.navbar .app_bar .mobile_menu ul li {
+  cursor: pointer;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 8px;
+  border-radius: 6px;
+  transition: all 120ms ease-in-out;
+}
+.navbar .app_bar .mobile_menu ul li .sm_svg {
+  width: 25px;
+  height: 25px;
+}
+.navbar .app_bar .mobile_menu ul li:hover {
+  background-color: #8aff94;
+}
+.navbar .app_bar .mobile_menu ul li:active {
+  background-color: #8aff94;
+  transform: scale(0.95);
+}
+.navbar .app_bar .mobile_menu .spacing {
+  width: 100%;
+  height: 30%;
+}
+.navbar .app_bar .mobile_menu .call {
+  justify-self: end;
+  color: black;
+  cursor: pointer;
+  border-radius: 6px;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #8aff94;
+  gap: 15px;
+  font-weight: 600;
+  padding: 12px 0px;
+  transition: all 120ms ease-in-out;
+}
+.navbar .app_bar .mobile_menu .call:hover {
+  background-color: #8aff94;
+  padding: 12px 8px;
+}
+.navbar .app_bar .mobile_menu .call:active {
+  background-color: #8aff94;
+  transform: scale(0.95);
 }
 .navbar .app_bar .mobile_menu.menu_open {
   right: 0;
+}
+.navbar .app_bar .overlay {
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 100%;
+  z-index: 250;
+  height: 100vh;
+  background-color: #000000;
+  opacity: 0.55;
+  display: none;
+}
+.navbar .app_bar .overlay.overlay_open {
+  display: flex;
 }
 
 @media only screen and (max-width: 576px) {
@@ -99,7 +202,7 @@
   }
   .navbar .app_bar.scrollOverlay {
     background-color: #cffcc6;
-    padding: 20px 20px 20px 20px;
+    padding: 14px 20px 14px 20px;
   }
   .navbar .app_bar.scrollOverlay .navigation .tools_page_redirect {
     display: none;

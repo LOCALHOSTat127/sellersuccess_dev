@@ -1,10 +1,16 @@
 import { useState, useEffect } from "react";
 import "./style.css";
 import { ReactComponent as Logo } from "../../assets/svg/logo.svg";
-import { useNavigate, Link } from "react-router-dom";
+import { useNavigate, Link, useLocation } from "react-router-dom";
 import { ReactComponent as OpenMenuSvg } from "../../assets/svg/open_menu_svg.svg";
 
+import { ReactComponent as CloseMenuSvg } from "../../assets/svg/closemenu.svg";
+import { ReactComponent as Bulb } from "../../assets/svg/bulb.svg";
+import { ReactComponent as Services } from "../../assets/svg/services.svg";
+import { ReactComponent as Documents } from "../../assets/svg/docs.svg";
+import { ReactComponent as CallSvg } from "../../assets/svg/call.svg";
 const Navbar = () => {
+  const location = useLocation();
   const NAVIGATE = useNavigate();
   const [isScrooling, setScrolling] = useState(false);
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -41,14 +47,14 @@ const Navbar = () => {
 
         <nav className="navigation">
           <ul>
-            <Link to="/about">
+            <Link to="about">
               <li>About us</li>
             </Link>
             <a
               style={{
                 textDecoration: "none",
               }}
-              href="#services"
+              href={location.pathname === "/" ? "#services" : "/"}
             >
               <li>Services</li>
             </a>
@@ -71,12 +77,49 @@ const Navbar = () => {
           />
         </nav>
 
-
-        <div   onClick={(e) => {
+        <div className={`mobile_menu ${isMenuOpen && "menu_open"}`}>
+          <CloseMenuSvg
+            onClick={(e) => {
               setMenuOpen(false);
-            }}  className={`mobile_menu ${isMenuOpen && "menu_open"}`}>
-          mobile_menu
+            }}
+            className="close_menu_svg"
+          />
+
+          <ul>
+            <Link to="about">
+              <li>
+                <Bulb className="sm_svg" />
+                About us
+              </li>
+            </Link>
+
+            <a
+              style={{
+                textDecoration: "none",
+              }}
+              href={location.pathname === "/" ? "#services" : "/"}
+            >
+              <li>
+                <Services className="sm_svg" />
+                Services
+              </li>
+            </a>
+            <li>
+              <Documents className="sm_svg" />
+              Documents
+            </li>
+          </ul>
+
+          <div className="spacing"></div>
+
+          <a href="tel:+9649460626">
+            <button className="call" id="call">
+              Contact Team
+              <CallSvg className="call_svg" />
+            </button>
+          </a>
         </div>
+        <div className={`overlay ${isMenuOpen && "overlay_open"}`}></div>
       </div>
     </header>
   );
